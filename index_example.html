@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadowverse: WB 卡片圖鑑測試網</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-6">
+
+    <div id="app" class="max-w-6xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-sky-400 mb-2">🃏 WB 卡牌圖鑑篩選器</h1>
+            <p class="text-slate-400 text-sm">本地 MongoDB 資料庫 + Vue 3 聯動測試</p>
+        </header>
+
+        <nav class="flex flex-wrap gap-2 justify-center mb-8 bg-slate-800 p-4 rounded-xl border border-slate-700">
+            <button 
+                v-for="(name, id) in classes" 
+                :key="id"
+                @click="changeClass(id)"
+                :class="[
+                    'px-4 py-2 rounded-lg font-medium transition-colors cursor-pointer',
+                    selectedClass == id ? 'bg-sky-500 text-white shadow-lg' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                ]"
+            >
+                {{ name }}
+            </button>
+        </nav>
+
+        <div v-if="loading" class="text-center text-xl text-sky-400 py-10 animate-pulse">
+            🔮 正在從 MongoDB 撈取卡片中...
+        </div>
+
+        <div v-else class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div 
+                v-for="card in cardList" 
+                :key="card._id"
+                class="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:border-sky-500 transition-all shadow-md flex flex-col justify-between"
+            >
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm shadow">
+                            {{ card.cost }}
+                        </span>
+                        <span class="text-xs text-slate-400 px-2 py-0.5 rounded bg-slate-900 border border-slate-700">
+                            Rarity: {{ card.rarity }}
+                        </span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">{{ card.common.name }}</h3>
+                    
+                    <div v-if="card.common.atk !== undefined" class="text-sm text-amber-400 font-semibold mb-3">
+                        ⚔️ {{ card.common.atk }} / ❤️ {{ card.common.life }}
+                    </div>
+                    
+                    <p class="text-xs text-slate-300 whitespace-pre-line bg-slate-900/50 p-2 rounded border border-slate-800 min-h-[60px]">
+                        {{ card.common.skill_text || '無特殊效果' }}
+                    </p>
+                </div>
+
+                <div class="mt-4 pt-2 border-t border-slate-700/50 text-[10px] text-slate-500 flex justify-between">
+                    <span>ID: {{ card._id }}</span>
+                    <span>CV: {{ card.common.cv || '無' }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, onMounted } = Vue;
+
+        createApp({
+            setup() {
+                // 職業對照表
+                const classes = {
+                    0: "中立",
+                    1: "精靈",
+                    2: "皇家護衛",
+                    3: "巫師",
+                    4: "龍族",
+                    5: "夢魘",
+                    6: "主教",
+                    7: "復仇者"
+                };
+
+                const selectedClass = ref(0); // 預設選中中立 (0)
+                const cardList = ref([]);     // 卡片資料陣列
+                const loading = ref(false);   // 載入狀態
+
+                // 向後端請求卡片資料
+                const fetchCards = async (classId) => {
+                    loading.value = true;
+                    try {
+                        const response = await fetch(`http://localhost:3000/api/cards?class_id=${classId}`);
+                        const result = await response.json();
+                        if (result.success) {
+                            cardList.value = result.data;
+                        }
+                    } catch (error) {
+                        console.error("無法取得卡片：", error);
+                    } finally {
+                        loading.value = false;
+                    }
+                };
+
+                // 切換職業按鈕事件
+                const changeClass = (classId) => {
+                    selectedClass.value = classId;
+                    fetchCards(classId);
+                };
+
+                // 元件掛載時，先抓一次中立卡片
+                onMounted(() => {
+                    fetchCards(selectedClass.value);
+                });
+
+                return {
+                    classes,
+                    selectedClass,
+                    cardList,
+                    loading,
+                    changeClass
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

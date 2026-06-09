@@ -1,0 +1,27 @@
+回傳的JSON格式：包含dataheader,data。
+其中data是資料儲存部分，包含：
+cards,
+card_details,
+specific_effect_card_info,
+tribe_names,
+card_set_names,
+skill_names,
+skill_replace_text_names,
+count,
+sort_card_id_list,
+stats_list,
+result_error_code
+
+cards: 並非卡片本身資訊而是「卡片是否有衍生與關連卡」的列表
+sort_card_id_list : 畫面上列出的30張卡片 並且按照費用遞增 8碼數字
+card_details: 畫面上列出的30張卡片之所有資訊
+specific_effect_card_info: 卡片擁有的紋章與信仰能力(此兩種能力不屬於卡片本身範疇)
+
+目的 先拼湊出該搜尋條件下的所有卡片列表
+作法: 將offset條件由0開始每次30遞增
+直到傳回的"sort_card_id_list"為空，
+期間將"sort_card_id_list"與其他三種關於卡片的list拼接串聯成一份大的JSON
+得到class(查詢的職業)_cards.json 等四個檔案儲存
+範例 https://shadowverse-wb.com/web/CardList/cardList?offset=90&class=1&cost=0,1,2,3,4,5,6,7,8,9,10
+查詢條件為精靈(class=1)
+(cost=0,1,2,3,4,5,6,7,8,9,10需要附加進去)

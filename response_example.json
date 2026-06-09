@@ -1,0 +1,1478 @@
+{
+    "data_headers": {
+        "result_code": 1,
+        "user_id": 0,
+        "user_name": "",
+        "is_login": false,
+        "csrf_token": "9eacde4c-80a8-4968-a48e-9a7c19233b01"
+    },
+    "data": {
+        "cards": {
+            "10112120": {
+                "related_card_ids": [
+                    90011110
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10614120": {
+                "related_card_ids": [
+                    90014330
+                ],
+                "specific_effect_card_ids": [
+                    10614122
+                ]
+            },
+            "10711120": {
+                "related_card_ids": [
+                    90011110
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10111310": {
+                "related_card_ids": [
+                    90011110
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10412310": {
+                "related_card_ids": [
+                    10412310
+                ],
+                "specific_effect_card_ids": [
+                    10412312
+                ]
+            },
+            "10712310": {
+                "related_card_ids": [
+                    10713310,
+                    10712310
+                ],
+                "specific_effect_card_ids": [
+                    10712312
+                ]
+            },
+            "10713310": {
+                "related_card_ids": [
+                    10712310,
+                    10713310
+                ],
+                "specific_effect_card_ids": [
+                    10713312
+                ]
+            },
+            "10011110": {
+                "related_card_ids": [
+                    90011110
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10212120": {
+                "related_card_ids": [
+                    90011110
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10512110": {
+                "related_card_ids": [
+                    10512110
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10612110": {
+                "related_card_ids": [
+                    90011120
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10412312": {
+                "related_card_ids": [
+                    10412310
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10712312": {
+                "related_card_ids": [
+                    10713310
+                ],
+                "specific_effect_card_ids": []
+            },
+            "10713312": {
+                "related_card_ids": [
+                    10712310
+                ],
+                "specific_effect_card_ids": []
+            }
+        },
+        "card_details": {
+            "10012110": {
+                "common": {
+                    "card_id": 10012110,
+                    "name": "冒險精靈‧小梅",
+                    "name_ruby": "冒險精靈‧小梅",
+                    "base_card_id": 10012110,
+                    "card_resource_id": 100121100,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "「我曾以為變成大人後就無所不能。」\n到外面的世界冒險後，她知曉了許多不知道的事。\n「但其實不是的。即使是大人也有辦不到的事。」\n雖然外貌仍是少女，但她正走在成為大人的道路上。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】指定1張敵方戰場上的從者卡。給予其3點傷害。",
+                    "card_set_id": 10000,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 2,
+                    "cv": "門脇舞以",
+                    "illustrator": "ツネくん",
+                    "questions": [
+                        {
+                            "question": "本回合中已使用2張卡片時，若使用『冒險精靈‧小梅』會發動【連擊_3】嗎？",
+                            "answer": "會發動。使用的卡片本身也將計入【連擊】。"
+                        }
+                    ],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "eaa4a29ae3524dc393076e69fba629b2",
+                    "card_banner_image_hash": "f3419dc8a59a4539a5ca1245cf24bac5"
+                },
+                "evo": {
+                    "card_resource_id": 100121101,
+                    "flavour_text": "變成大人，是非常辛苦的。\n不是只有快樂的事，而且也不自由……\n……即使這樣，我還是想變成大人！\n因為變成大人的話，就能守護比現在更多的東西！",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】指定1張敵方戰場上的從者卡。給予其3點傷害。",
+                    "card_image_hash": "614595b1202c4619b4ecd2f52aa901b9",
+                    "card_banner_image_hash": "dbbdb53a40e44726ab2559fd68b5616c"
+                },
+                "style_card_list": []
+            },
+            "10112120": {
+                "common": {
+                    "card_id": 10112120,
+                    "name": "純真的水之妖精",
+                    "name_ruby": "純真的水之妖精",
+                    "base_card_id": 10112120,
+                    "card_resource_id": 101121200,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "正因知道妖精的惡毒，徘徊於林中的男子陷入恐慌。\n忍受著飢渴的他終於發現了水源，但卻有妖精在旁。\n「糟糕了！你要趕快喝水來恢復體力！」",
+                    "skill_text": "【<color=Keyword>謝幕曲</color>】增加1張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_set_id": 10001,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 2,
+                    "cv": "辻あゆみ",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "ec98855785e34d5788757c3dfc39465e",
+                    "card_banner_image_hash": "b9ed7e0d3baa4ba79e036efb27ff078d"
+                },
+                "evo": {
+                    "card_resource_id": 101121201,
+                    "flavour_text": "這裡的水真的很好喝，而且還很有效！\n大家都說一喝就會上癮，感覺像是要升天了！\n……你為什麼要逃走呢！？這不是可疑的水啊～！",
+                    "skill_text": "【<color=Keyword>謝幕曲</color>】增加1張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_image_hash": "e8999e53131d4b8db1136ea063f2819a",
+                    "card_banner_image_hash": "51449a3bed424f8b81f177381728c31a"
+                },
+                "style_card_list": []
+            },
+            "90011110": {
+                "common": {
+                    "card_id": 90011110,
+                    "name": "妖精",
+                    "name_ruby": "妖精",
+                    "base_card_id": 90011110,
+                    "card_resource_id": 900111100,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "有不少目睹到妖精的證詞，其特徵也出現許多分歧。\n但所有目擊者都會異口同聲地說──\n「要小心妖精的惡作劇」。",
+                    "skill_text": "【<color=Keyword>突進</color>】",
+                    "card_set_id": 90000,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        5
+                    ],
+                    "cost": 1,
+                    "rarity": 1,
+                    "cv": "明坂聰美",
+                    "illustrator": "おぶ",
+                    "questions": [],
+                    "is_token": true,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "18d4d3c2ddd6481193aa789826aaac68",
+                    "card_banner_image_hash": "2981c32ad9a54871a2abae091cad0817"
+                },
+                "evo": {
+                    "card_resource_id": 900111101,
+                    "flavour_text": "也有一種說法是每個目擊者看見的妖精都不相同。\n但不管如何……毫無疑問地大家都被妖精玩弄了。\n──關於妖精的研究報告",
+                    "skill_text": "【<color=Keyword>突進</color>】",
+                    "card_image_hash": "f74fcf9e9e9347088871f88228dffec6",
+                    "card_banner_image_hash": "df7e98882c074ec1bba80a99ac1c9188"
+                },
+                "style_card_list": [
+                    {
+                        "hash": "61350bab20a344dba7ddfb7f343e9703",
+                        "evo_hash": "b62d554bc75f41998a7007cc1d514b37",
+                        "name": "",
+                        "name_ruby": "",
+                        "cv": "",
+                        "illustrator": "カイエダヒロシ",
+                        "skill_text": "",
+                        "flavour_text": "",
+                        "evo_flavour_text": ""
+                    }
+                ]
+            },
+            "10614120": {
+                "common": {
+                    "card_id": 10614120,
+                    "name": "古老天槍‧賽瑟妮特",
+                    "name_ruby": "古老天槍‧賽瑟妮特",
+                    "base_card_id": 10614120,
+                    "card_resource_id": 106141200,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "啊啊，請實現我這個■■。這是我最真切的請求。\n我們獵境者，是古老的存在，亦是沒有相貌的黑暗。\n在爭奪與戰鬥的盡頭，已無數次毀滅了■■。\n我已經不想再重複這種事了，我要停止這場爭鬥。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】使信仰值-10，並增加1張『<color=Keyword>天槍的深淵</color>』到自己的手牌中。使自己的信仰獲得「當自己的從者卡進化時，給予敵方的主戰者1點傷害」。\n<hr>【<color=Keyword>吸血</color>】",
+                    "card_set_id": 10006,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        19
+                    ],
+                    "cost": 1,
+                    "rarity": 4,
+                    "cv": "堀江由衣",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "680c35614bbe41a5bab27ff191aca89c",
+                    "card_banner_image_hash": "5d93f276e8af45f18893ef0668ba5796"
+                },
+                "evo": {
+                    "card_resource_id": 106141201,
+                    "flavour_text": "歐露媞寧雅，身為好■，請容我與妳■■的心同在。\n因懷有■仰，才構成了妳我的身心。\n我們在這陌生的世界，要獲得力量就必須得到幫助。\n古老之物不能存在。我永遠助妳開拓自己的■路。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】使信仰值-10，並增加1張『<color=Keyword>天槍的深淵</color>』到自己的手牌中。使自己的信仰獲得「當自己的從者卡進化時，給予敵方的主戰者1點傷害」。\n<hr>【<color=Keyword>吸血</color>】",
+                    "card_image_hash": "e0be584a23074e6eb32d676dc7f7a929",
+                    "card_banner_image_hash": "1ae6ebf783f24e6e98c1f434b812e13e"
+                },
+                "style_card_list": []
+            },
+            "90014330": {
+                "common": {
+                    "card_id": 90014330,
+                    "name": "天槍的深淵",
+                    "name_ruby": "天槍的深淵",
+                    "base_card_id": 90014330,
+                    "card_resource_id": 900143300,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "「能提前得感謝友人，那就換我成為嶄新順風吧。」\n「向意志獻上■意。如同這座森林，■斷古老■。」",
+                    "skill_text": "指定1張自己戰場上進化前的從者卡。使其進化。",
+                    "card_set_id": 90000,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        19
+                    ],
+                    "cost": 1,
+                    "rarity": 4,
+                    "cv": "沢城みゆき/堀江由衣",
+                    "illustrator": "タツヤキ",
+                    "questions": [],
+                    "is_token": true,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "ec85cadb4d93490d9101f08b749749aa",
+                    "card_banner_image_hash": "dd95aadb5f7d486880d688e78b4a250d"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10711120": {
+                "common": {
+                    "card_id": 10711120,
+                    "name": "精靈陷阱師",
+                    "name_ruby": "精靈陷阱師",
+                    "base_card_id": 10711120,
+                    "card_resource_id": 107111200,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "「預計會有很大的損害。」\n預示到危險即將到來的坦斯特黛茲催促著村民避難。\n村民們向她深深鞠躬致謝後，便離村莊而去。\n──殲滅客神的凍結弓槍 4",
+                    "skill_text": "【<color=Keyword>入場曲</color>】指定1張自己手牌中的卡片。使其返回牌堆中。增加2張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_set_id": 10007,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 1,
+                    "cv": "戶谷菊之介",
+                    "illustrator": "藤江せい",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "78a2ca7fe638463c923406727a60f771",
+                    "card_banner_image_hash": "2516c81fd5924ec0915e1d954b2242a2"
+                },
+                "evo": {
+                    "card_resource_id": 107111201,
+                    "flavour_text": "此時，坦斯特黛茲把逃難的村民叫住。\n「就算是沒用的村民，多少能引起鹿的注意吧。\n你們將會是引誘那傢伙出來的誘餌，動作快啊！」\n──殲滅客神的凍結弓槍 5",
+                    "skill_text": "【<color=Keyword>入場曲</color>】指定1張自己手牌中的卡片。使其返回牌堆中。增加2張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_image_hash": "ed738caf95bb412aacbf04da0a8e9a42",
+                    "card_banner_image_hash": "c75ab62e4fb440368395baac061bc11c"
+                },
+                "style_card_list": []
+            },
+            "10012310": {
+                "common": {
+                    "card_id": 10012310,
+                    "name": "群蟲惡兆",
+                    "name_ruby": "群蟲惡兆",
+                    "base_card_id": 10012310,
+                    "card_resource_id": 100123100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "蟲群遮蔽整片景色，是牠們珍視森林的無心之舉。\n「當時如果無視牠們，可就要出大事了呢！」\n「別再重提那麼久以前的事了啦！」\n蟲群出於好意的傳言，一旦錯過便會立即付出代價。",
+                    "skill_text": "指定1張自己戰場上的卡片。使其返回手牌中。隨機給予1張敵方戰場上的從者卡2點傷害。",
+                    "card_set_id": 10000,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 2,
+                    "cv": "",
+                    "illustrator": "misekiss",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "4afc10fa4e5447d480b3240d718393cf",
+                    "card_banner_image_hash": "3d376a7b4b9c4df6901cac304f0a7a46"
+                },
+                "evo": [],
+                "style_card_list": [
+                    {
+                        "hash": "4658e4a5688344598df787b77339c7ad",
+                        "evo_hash": "",
+                        "name": "變出花田的魔法",
+                        "name_ruby": "變出花田的魔法",
+                        "cv": "種崎敦美",
+                        "illustrator": "",
+                        "skill_text": "指定1張自己戰場上的卡片。使其返回手牌中。隨機給予1張敵方戰場上的從者卡2點傷害。\n\n※此卡片與『群蟲惡兆』視為同一張卡片。",
+                        "flavour_text": "變出花田的魔法。\n──芙莉蓮",
+                        "evo_flavour_text": ""
+                    }
+                ]
+            },
+            "10111310": {
+                "common": {
+                    "card_id": 10111310,
+                    "name": "召集妖精",
+                    "name_ruby": "召集妖精",
+                    "base_card_id": 10111310,
+                    "card_resource_id": 101113100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "「妖精收到指示或命令時都會充耳不聞。\n但如果是朋友的請求，他們就會真誠地傾聽。」\n──談論著妖精的精靈男性",
+                    "skill_text": "增加2張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_set_id": 10001,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 1,
+                    "cv": "",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "477d6f7072fa4faea2a57a72188931b9",
+                    "card_banner_image_hash": "db75b2d55f5f4c4e8faeb07720c358b9"
+                },
+                "evo": [],
+                "style_card_list": [
+                    {
+                        "hash": "462189df64e642a0866a0fa99179a251",
+                        "evo_hash": "",
+                        "name": "",
+                        "name_ruby": "",
+                        "cv": "花澤香菜",
+                        "illustrator": "",
+                        "skill_text": "",
+                        "flavour_text": "",
+                        "evo_flavour_text": ""
+                    }
+                ]
+            },
+            "10212310": {
+                "common": {
+                    "card_id": 10212310,
+                    "name": "來自樹上的突襲",
+                    "name_ruby": "來自樹上的突襲",
+                    "base_card_id": 10212310,
+                    "card_resource_id": 102123100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "在森林中迷路時，就算發現有路也不能沿著它走。\n「林間道路乃獸道，即是作為野獸被獵殺之道路。」",
+                    "skill_text": "發動1次「隨機給予1張敵方戰場上的從者卡2點傷害」。【<color=Keyword>連擊</color>_3】由原本的1次轉變為2次。",
+                    "card_set_id": 10002,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 2,
+                    "cv": "",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "647f36fd750d4e39ab5f306c8bb5b78f",
+                    "card_banner_image_hash": "097bfb50037342279c519bb02dbb8073"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10313310": {
+                "common": {
+                    "card_id": 10313310,
+                    "name": "驅逐的死箭",
+                    "name_ruby": "驅逐的死箭",
+                    "base_card_id": 10313310,
+                    "card_resource_id": 103133100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "過去，不弒試煉被克服了。\n隨後世界被賦予嶄新的絕命試煉。\n絕傑之六所施展的力量，乃絕命之不弒。\n──試煉仍在。此刻，世界亦處於災禍當中。",
+                    "skill_text": "發動X次「隨機使1張敵方戰場上的從者卡-0/-1」。X為「自己的【<color=Keyword>連擊</color>】數」。",
+                    "card_set_id": 10003,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 3,
+                    "cv": "大塚芳忠",
+                    "illustrator": "Budi",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "33e76c5899f04a119b3a530a450c0112",
+                    "card_banner_image_hash": "a68bfc232aaf4777b0779d8ecf7b247d"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10412310": {
+                "common": {
+                    "card_id": 10412310,
+                    "name": "綺羅星",
+                    "name_ruby": "綺羅星",
+                    "base_card_id": 10412310,
+                    "card_resource_id": 104123100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "呵呵～♪新的服裝非常完美對吧？\n果然轉換穿搭風格很棒呢～\n既然感覺也對了，\n梅提拉姐姐就特別來陪你玩‧一‧場！",
+                    "skill_text": "隨機給予1張敵方戰場上的從者卡2點傷害。【<color=Keyword>連擊</color>_5】使自己獲得『紋章：綺羅星』。",
+                    "card_set_id": 10004,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 1,
+                    "rarity": 2,
+                    "cv": "柚木涼香",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "cbca8cbd03b24c3c80479eaaa8ada4a7",
+                    "card_banner_image_hash": "c494e41b07ef42848ddcf1dcda418cb7"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10711310": {
+                "common": {
+                    "card_id": 10711310,
+                    "name": "人格切換",
+                    "name_ruby": "人格切換",
+                    "base_card_id": 10711310,
+                    "card_resource_id": 107113100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "令人生畏的客神，以暴風雪與雪崩毀滅不少村落。\n村民為了守護村莊與家人，以微薄錢財籌資，\n委託控質的弒滅者殺害惡神。\n──殲滅客神的凍結弓槍 1",
+                    "skill_text": "指定2張自己手牌中的卡片。使其返回牌堆中。由自己的牌堆中抽取2張卡片。",
+                    "card_set_id": 10007,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        20
+                    ],
+                    "cost": 1,
+                    "rarity": 1,
+                    "cv": "齋藤千和",
+                    "illustrator": "乃木Lief",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "6153609aacef445982124cf7c05a62b6",
+                    "card_banner_image_hash": "e89737d2673f44109d44e0d20b05fa23"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10712310": {
+                "common": {
+                    "card_id": 10712310,
+                    "name": "縮小憂慮",
+                    "name_ruby": "縮小憂慮",
+                    "base_card_id": 10712310,
+                    "card_resource_id": 107123100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "坦斯特黛茲那前後矛盾的舉止，\n使村民內心深深動搖。更令人毛骨悚然的是，\n坦斯特黛茲並不在意自己的異常言行。\n──殲滅客神的凍結弓槍 6",
+                    "skill_text": "回復自己的主戰者1點生命值。【<color=Keyword>連擊</color>_3】使自己獲得『紋章：縮小憂慮』。",
+                    "card_set_id": 10007,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        20
+                    ],
+                    "cost": 1,
+                    "rarity": 2,
+                    "cv": "齋藤千和",
+                    "illustrator": "Mew",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "187692e581fd4d3b97f088f800a8a5c2",
+                    "card_banner_image_hash": "32a27279cf314099b4a103411744a1da"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10713310": {
+                "common": {
+                    "card_id": 10713310,
+                    "name": "擴大惡意",
+                    "name_ruby": "擴大惡意",
+                    "base_card_id": 10713310,
+                    "card_resource_id": 107133100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "縱使鹿神身形變小，仍比人類龐大。\n坦斯特黛茲將巨槍刺向鹿神。\n只見其發出淒慘悲鳴後，當場倒下。\n──殲滅客神的凍結弓槍 11",
+                    "skill_text": "隨機給予1張敵方戰場上的從者卡2點傷害。【<color=Keyword>連擊</color>_3】使自己獲得『紋章：擴大惡意』。",
+                    "card_set_id": 10007,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        20
+                    ],
+                    "cost": 1,
+                    "rarity": 3,
+                    "cv": "齋藤千和",
+                    "illustrator": "Mew",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "b75c7f73b6134221ab515f07d07bf8d5",
+                    "card_banner_image_hash": "1d40425d12c84b16956dec14c6faba65"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10011110": {
+                "common": {
+                    "card_id": 10011110,
+                    "name": "妖精馴服者",
+                    "name_ruby": "妖精馴服者",
+                    "base_card_id": 10011110,
+                    "card_resource_id": 100111100,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "只要肯花時間，也能馴服喜歡惡作劇的妖精喔！\n昨天的惡作劇，也不過是把我家變成幾片木屑罷了。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】增加2張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_set_id": 10000,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "井口裕香",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "8cc01631ebb64a17b592a3fdd0d8f3e6",
+                    "card_banner_image_hash": "471daf6d19d044bc8dc7a53e8fdf77c0"
+                },
+                "evo": {
+                    "card_resource_id": 100111101,
+                    "flavour_text": "「利齒折於薄翅」\n──意為「被妖精馴服」的森林諺語",
+                    "skill_text": "【<color=Keyword>入場曲</color>】增加2張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_image_hash": "fcdd17c11624418c9bec81a8d2958bb7",
+                    "card_banner_image_hash": "dad0eeb4e7384f67a08f7c6a163c6872"
+                },
+                "style_card_list": []
+            },
+            "10011120": {
+                "common": {
+                    "card_id": 10011120,
+                    "name": "獨行的獸人",
+                    "name_ruby": "獨行的獸人",
+                    "base_card_id": 10011120,
+                    "card_resource_id": 100111200,
+                    "atk": 2,
+                    "life": 2,
+                    "flavour_text": "對人搖尾示好，讓人恣意指使，\n我已經捨棄那種人生了！\n若連要走的路都得聽令服從，那我寧可當一條野狗！",
+                    "skill_text": "【<color=Keyword>入場曲</color>】使自己的【<color=Keyword>連擊</color>】+1。",
+                    "card_set_id": 10000,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "吉永拓斗",
+                    "illustrator": "風篠",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "9c705be631f4415aa16e73a460864b16",
+                    "card_banner_image_hash": "3d712f6753ea492b8e06ced7b8fc3d82"
+                },
+                "evo": {
+                    "card_resource_id": 100111201,
+                    "flavour_text": "野狗沒有居所、沒有避風的屋簷、沒有可依靠的人。\n但無論身在何種困境中，也絕不放棄。\n「我雖然是隻野狗，但絕對不會成為落魄的狗！」",
+                    "skill_text": "【<color=Keyword>入場曲</color>】使自己的【<color=Keyword>連擊</color>】+1。",
+                    "card_image_hash": "f43b987bf207483dbe393cb0d7b27fec",
+                    "card_banner_image_hash": "eb641e8188ab4495ae5301f4e223eede"
+                },
+                "style_card_list": []
+            },
+            "10111110": {
+                "common": {
+                    "card_id": 10111110,
+                    "name": "舞動的妖精",
+                    "name_ruby": "舞動的妖精",
+                    "base_card_id": 10111110,
+                    "card_resource_id": 101111100,
+                    "atk": 2,
+                    "life": 1,
+                    "flavour_text": "新舞蹈的關鍵在於表現力！要讓觀眾明白你的情緒！\n一、一、二、二、一！二！一、二、一、二！\n二、二、二！一、二、一、一！",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】使自己戰場上全部的其他從者卡+1/+1。",
+                    "card_set_id": 10001,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "潘めぐみ",
+                    "illustrator": "ヘスン",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "794622845e8146b5a3eb48f75bb74ffd",
+                    "card_banner_image_hash": "b3c77a9c3d2c41bfbe6b8da6d80668e9"
+                },
+                "evo": {
+                    "card_resource_id": 101111101,
+                    "flavour_text": "少女在某座森林的祭典中展露了新的舞步。\n而觀眾們都異口同聲地說出了同樣的感想──\n那是段能讓人感受到「快樂」情緒的優秀舞蹈。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】使自己戰場上全部的其他從者卡+1/+1。",
+                    "card_image_hash": "a73064701dfb4fd391f68aa88688d2f2",
+                    "card_banner_image_hash": "d27dab5fed114647adf1bce3a505ba62"
+                },
+                "style_card_list": []
+            },
+            "10112130": {
+                "common": {
+                    "card_id": 10112130,
+                    "name": "幼年寶石獸",
+                    "name_ruby": "幼年寶石獸",
+                    "base_card_id": 10112130,
+                    "card_resource_id": 101121300,
+                    "atk": 2,
+                    "life": 2,
+                    "flavour_text": "僅棲息在某特定森林的奇特寶石獸。\n有許多研究者想探究其生態，卻都毫無成果。\n然而某男子自認為與他人不同，便開始了研究。\n他的熱情就如寶石獸額頭的紅寶石般閃爍著光芒。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】指定1張自己戰場上的其他卡片。使其返回手牌中。\n<hr><sev>【<color=Keyword>超進化時</color>】回復自己的PP 3點。</sev>",
+                    "card_set_id": 10001,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 2,
+                    "cv": "",
+                    "illustrator": "タツヤキ",
+                    "questions": [
+                        {
+                            "question": "自己的戰場上有『幼年寶石獸』，且自己的PP最大值為9時，先使用額外PP將PP增加至10，接著使用消費為3的『熾天使的福音』讓PP轉變為7。隨後，若使『幼年寶石獸』超進化，透過【超進化】的能力將會回復多少自己的PP？",
+                            "answer": "會回復3點PP。"
+                        }
+                    ],
+                    "is_token": false,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "62421646758e4d54a71351090f2e00b9",
+                    "card_banner_image_hash": "8291841700ae44c4b59e8ac8eaad35ae"
+                },
+                "evo": {
+                    "card_resource_id": 101121301,
+                    "flavour_text": "寶石獸額間的紅寶石日益耀眼，\n男子對研究的熱情則日漸消退。\n這兩個成反比的現象，使他意識到了一件事。\n「紅寶石會將人的熱情……算了，都無所謂了……」",
+                    "skill_text": "【<color=Keyword>入場曲</color>】指定1張自己戰場上的其他卡片。使其返回手牌中。\n<hr><sev>【<color=Keyword>超進化時</color>】回復自己的PP 3點。</sev>",
+                    "card_image_hash": "821cbbe092b94d2484399e03abd53c57",
+                    "card_banner_image_hash": "d0d69a4ff20f47a4aff3b7ff42962047"
+                },
+                "style_card_list": []
+            },
+            "10113110": {
+                "common": {
+                    "card_id": 10113110,
+                    "name": "純潔冰晶‧莉莉",
+                    "name_ruby": "純潔冰晶‧莉莉",
+                    "base_card_id": 10113110,
+                    "card_resource_id": 101131100,
+                    "atk": 1,
+                    "life": 3,
+                    "flavour_text": "被允許通過冰晶宮正門者，會受到冰晶族的歡迎。\n出來迎接的，是內心如新雪般潔白的純真少女。\n魔法躍動，細雪飄舞，她用盡全力款待著訪客。\n「莉莉會用魔法好好招待你的！」",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】指定1張敵方戰場上的從者卡。使其生命值轉變為1。\n<hr><ev>【<color=Keyword>進化時</color>】由自己的牌堆中抽取1張卡片。指定1張敵方戰場上的從者卡。給予其1點傷害。</ev>",
+                    "card_set_id": 10001,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 3,
+                    "cv": "井口裕香",
+                    "illustrator": "ぽんず",
+                    "questions": [
+                        {
+                            "question": "透過『純潔冰晶‧莉莉』的【入場曲】能力，使轉變為攻擊力4/生命值1的『威撼的歌利亞』進化後，其攻擊力/生命值將如何變化？若為超進化，又將如何變化？",
+                            "answer": "進化時為攻擊力6/生命值3；超進化時為攻擊力7/生命值4。"
+                        }
+                    ],
+                    "is_token": false,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "46f17c3309f04c7fbab830d561e5017b",
+                    "card_banner_image_hash": "b53b8f9774b847bcb515a3dff1b83cfc"
+                },
+                "evo": {
+                    "card_resource_id": 101131101,
+                    "flavour_text": "象徵傳說之地──冰晶之國的一大要素就是「晶」。\n無數閃耀著美麗光輝且純度極高的結晶，\n其中更有學者們渴望至極的高價之物。\n「很漂亮對吧？這裡有很多所以送一些給你！」",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】指定1張敵方戰場上的從者卡。使其生命值轉變為1。\n<hr><ev>【<color=Keyword>進化時</color>】由自己的牌堆中抽取1張卡片。指定1張敵方戰場上的從者卡。給予其1點傷害。</ev>",
+                    "card_image_hash": "c7620e446f0146cf8c638ec2792a2f98",
+                    "card_banner_image_hash": "55dd7e5388ea44ddaa0f076f2bd121ef"
+                },
+                "style_card_list": []
+            },
+            "10212120": {
+                "common": {
+                    "card_id": 10212120,
+                    "name": "妖精劍客",
+                    "name_ruby": "妖精劍客",
+                    "base_card_id": 10212120,
+                    "card_resource_id": 102121200,
+                    "atk": 2,
+                    "life": 2,
+                    "flavour_text": "樹蔭、草叢、樹樁後方，森林裡有許多地方可躲藏。\n因此擊退入侵者的最佳方式，就是耐心躲藏並奇襲。\n但妖精就是沉不住氣，所以反而會採取顯眼的手段。",
+                    "skill_text": "於手牌中發動。當自己的從者卡超進化時，使這張卡片的消費轉變為1。\n<hr>【<color=Keyword>入場曲</color>】增加1張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_set_id": 10002,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 2,
+                    "cv": "東山奈央",
+                    "illustrator": "虚猫",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "ad2f5bf39d9943f79cd663e5e66da513",
+                    "card_banner_image_hash": "acafdfd042264df793742a1257eba7e8"
+                },
+                "evo": {
+                    "card_resource_id": 102121201,
+                    "flavour_text": "笨～蛋！笨～蛋！你看屁看～\n……只要這樣，目標就會看過來，變得容易下手喔。\n瞧，現在你就在看我了。那麼，要刺下去囉～！",
+                    "skill_text": "於手牌中發動。當自己的從者卡超進化時，使這張卡片的消費轉變為1。\n<hr>【<color=Keyword>入場曲</color>】增加1張『<color=Keyword>妖精</color>』到自己的手牌中。",
+                    "card_image_hash": "a58f4738ee584790a273a15aa3274e6a",
+                    "card_banner_image_hash": "15fa801b1f754526909f030de3593e35"
+                },
+                "style_card_list": []
+            },
+            "10311110": {
+                "common": {
+                    "card_id": 10311110,
+                    "name": "不弒的肯定者",
+                    "name_ruby": "不弒的肯定者",
+                    "base_card_id": 10311110,
+                    "card_resource_id": 103111100,
+                    "atk": 2,
+                    "life": 2,
+                    "flavour_text": "◆「死角拗」的葉針【症狀】急性發炎\n搔癢感會隨扎針次數轉為灼痛感。入門標準為十針。\n【合格者】十一名　【備註】其中一人承受了五十針\n──出自「入葉儀式的紀錄」 藤之期（摘錄）",
+                    "skill_text": "【<color=Keyword>入場曲</color>】指定1張敵方戰場上的從者卡。使其-0/-1。\n<hr><ev>【<color=Keyword>進化時</color>】發動與【<color=Keyword>入場曲</color>】相同的能力。</ev>",
+                    "card_set_id": 10003,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "伊瀨結陸",
+                    "illustrator": "タケバヤシ",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "17b589e69b6e4a7bac6156b3adc6b551",
+                    "card_banner_image_hash": "f395a2d032e44af080ccc96ce15b932a"
+                },
+                "evo": {
+                    "card_resource_id": 103111101,
+                    "flavour_text": "「我每天都覺得自己……真的是個沒用的廢物。」\n庫璐璐大人說道。「弓術拙劣，頭腦跟運氣也差。」\n接著便露出苦笑。「沒辦法，家人也嫌我礙事呢。」\n──出自「守護者的回憶錄」 1",
+                    "skill_text": "【<color=Keyword>入場曲</color>】指定1張敵方戰場上的從者卡。使其-0/-1。\n<hr><ev>【<color=Keyword>進化時</color>】發動與【<color=Keyword>入場曲</color>】相同的能力。</ev>",
+                    "card_image_hash": "454ee7628d5b43e18cc049a19a4cf975",
+                    "card_banner_image_hash": "9c93e455f8ec44a197eb5cd32fe4b08e"
+                },
+                "style_card_list": []
+            },
+            "10311120": {
+                "common": {
+                    "card_id": 10311120,
+                    "name": "妖精劍的承襲者",
+                    "name_ruby": "妖精劍的承襲者",
+                    "base_card_id": 10311120,
+                    "card_resource_id": 103111200,
+                    "atk": 1,
+                    "life": 3,
+                    "flavour_text": "不弒所招致的苦痛，化作賦予絕命的毀滅之弓。\n曾一度克服試煉的妖精劍，與屠殺的箭矢持續攻防。\n然而並非僅其一人與試煉對抗。\n仍有人為支援背負森林存亡的妖精劍而奔赴戰場。",
+                    "skill_text": "當自己的妖精‧從者卡進入戰場時，使這張卡片+1/+0。",
+                    "card_set_id": 10003,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "和泉風花",
+                    "illustrator": "白銀 鉱",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "d0c9302433e3493a80ee6471c557f59f",
+                    "card_banner_image_hash": "d67fa6a8b8bc41b2a139f7b0ed8a7d56"
+                },
+                "evo": {
+                    "card_resource_id": 103111201,
+                    "flavour_text": "反轉後的試煉仍持續著，並且將迎向新的階段。\n更艱鉅的威脅已迫在眉睫。\n不弒的繼承者──於苦痛中尋得療癒之人。\n不弒仍未凋零，絕命永無終結。",
+                    "skill_text": "當自己的妖精‧從者卡進入戰場時，使這張卡片+1/+0。",
+                    "card_image_hash": "4d1b4ed067aa4ec7afd73ee9bbd0e999",
+                    "card_banner_image_hash": "07348af803594f6ca04b145d9854412b"
+                },
+                "style_card_list": []
+            },
+            "10412110": {
+                "common": {
+                    "card_id": 10412110,
+                    "name": "美妝少女‧庫蘿耶",
+                    "name_ruby": "美妝少女‧庫蘿耶",
+                    "base_card_id": 10412110,
+                    "card_resource_id": 104121100,
+                    "atk": 2,
+                    "life": 2,
+                    "flavour_text": "誇張耶，居然讓整群魔物光速落跑，\n太神啦……有夠扯！！\n團長，真的是英雄耶……！！",
+                    "skill_text": "【<color=Keyword>爆能強化</color>_8】指定1張自己手牌中的從者卡。將其召喚到自己的戰場上。使這張卡片返回手牌中。",
+                    "card_set_id": 10004,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 2,
+                    "cv": "富田美憂",
+                    "illustrator": "",
+                    "questions": [
+                        {
+                            "question": "透過『美妝少女‧庫蘿耶』的【爆能強化_8】指定自己手牌中的『威撼的歌利亞』時，若除了『美妝少女‧庫蘿耶』以外，還有4張從者卡在戰場上，處理程序會如何變化？",
+                            "answer": "『威撼的歌利亞』將無法進入戰場，且『美妝少女‧庫蘿耶』會返回手牌中。"
+                        }
+                    ],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "1d8683c804eb4c4c9e10b59412f072bc",
+                    "card_banner_image_hash": "46ed9ee88b1748af932df0c6776f7a63"
+                },
+                "evo": {
+                    "card_resource_id": 104121101,
+                    "flavour_text": "團長各方面都太作弊了啦，真的。\n……啊，我突然有想法了☆\n庫蘿耶也要加入騎空團，變得像團長一樣！\n就是醬啦，請多指教囉～☆ヾ(o´∀`o)ﾉ",
+                    "skill_text": "【<color=Keyword>爆能強化</color>_8】指定1張自己手牌中的從者卡。將其召喚到自己的戰場上。使這張卡片返回手牌中。",
+                    "card_image_hash": "aa8e19c5fc2a495abcac121e78b3d5a6",
+                    "card_banner_image_hash": "ccb4e60831914f4db0780bc82d030005"
+                },
+                "style_card_list": []
+            },
+            "10414110": {
+                "common": {
+                    "card_id": 10414110,
+                    "name": "風之攝理‧伊維亞",
+                    "name_ruby": "風之攝理‧伊維亞",
+                    "base_card_id": 10414110,
+                    "card_resource_id": 104141100,
+                    "atk": 2,
+                    "life": 1,
+                    "flavour_text": "你啊，是在想「有隻好可愛的貓耶～」對吧？\n真是的，所以才說人類根本就不行嘛！\n我伊維亞正是風之攝理，六龍之「翠」！\n你要加倍寵愛和奉獻，因為我可不是普通的貓啦～！",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>奧義</color>】回復自己的EP 1點。\n<hr>【<color=Keyword>突進</color>】",
+                    "card_set_id": 10004,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 4,
+                    "cv": "引坂理繪",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "2bd751f7115248f8a0e4230eb85a1272",
+                    "card_banner_image_hash": "4b7de1151eda485e88e7cefbeaddccb2"
+                },
+                "evo": {
+                    "card_resource_id": 104141101,
+                    "flavour_text": "其他的「楔」啊，根～本就完全沒搞清楚～\n變化成人類之子，就只會被束縛在狹隘的人世。\n自由且全人類會無條件崇拜的高等存在，非貓莫屬！\n果然我伊維亞才是在六龍之中最聰明的啦～！",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>奧義</color>】回復自己的EP 1點。\n<hr>【<color=Keyword>突進</color>】",
+                    "card_image_hash": "5d3b113312d84b4f9943a2ba3b898a56",
+                    "card_banner_image_hash": "70e7a3a23aa8485e9bf42c2b0c279e6a"
+                },
+                "style_card_list": [
+                    {
+                        "hash": "1ba583a9146746e59e41a1ac846699a7",
+                        "evo_hash": "d2e3ae5f108d4b36b59456679f46c736",
+                        "name": "",
+                        "name_ruby": "",
+                        "cv": "",
+                        "illustrator": "",
+                        "skill_text": "",
+                        "flavour_text": "",
+                        "evo_flavour_text": ""
+                    },
+                    {
+                        "hash": "a4b8c9fe1ddc4f8d927b8d622798e04b",
+                        "evo_hash": "b51eef0324954b17b5ca1483ce1d8a88",
+                        "name": "",
+                        "name_ruby": "",
+                        "cv": "",
+                        "illustrator": "",
+                        "skill_text": "",
+                        "flavour_text": "",
+                        "evo_flavour_text": ""
+                    }
+                ]
+            },
+            "10511110": {
+                "common": {
+                    "card_id": 10511110,
+                    "name": "卓識的狸貓",
+                    "name_ruby": "卓識的狸貓",
+                    "base_card_id": 10511110,
+                    "card_resource_id": 105111100,
+                    "atk": 1,
+                    "life": 3,
+                    "flavour_text": "我提出邀請了，就陪我玩玩吧……啊啊啊，不行了。\n嘻、人、人類、在看我、唔嘻嘻嘻嘻……！\n──蟲風花的遊戲 8",
+                    "skill_text": "【<color=Keyword>潛行</color>】\n<hr><ev>【<color=Keyword>進化時</color>】由自己的牌堆中抽取1張卡片。</ev>",
+                    "card_set_id": 10005,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "黑田崇矢",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "2ceb6f3a005f4537add6d52404355c21",
+                    "card_banner_image_hash": "49cd00e155924be9a74f254d70765833"
+                },
+                "evo": {
+                    "card_resource_id": 105111101,
+                    "flavour_text": "喂！你啊，有趣的女人向你挑戰有趣的遊戲了呢！\n不過我覺得輸了反而才是真正的獲勝！\n畢竟這樣就可以玩一輩子了耶？\n──蟲風花的遊戲 9 ‧《倒吊人》的引導",
+                    "skill_text": "【<color=Keyword>潛行</color>】\n<hr><ev>【<color=Keyword>進化時</color>】由自己的牌堆中抽取1張卡片。</ev>",
+                    "card_image_hash": "bcabd13454d34d7dbfbe07fbf3d587a1",
+                    "card_banner_image_hash": "22072a502f6d4610868691b88eecf213"
+                },
+                "style_card_list": []
+            },
+            "10512110": {
+                "common": {
+                    "card_id": 10512110,
+                    "name": "新銳搭檔",
+                    "name_ruby": "新銳搭檔",
+                    "base_card_id": 10512110,
+                    "card_resource_id": 105121100,
+                    "atk": 2,
+                    "life": 2,
+                    "flavour_text": "啊……啊啊啊，已經纏上去了，多餘又礙事的蟲子。\n那邊是我的位置才對。明明人類是屬於我的……！\n──蟲風花的遊戲 10",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_5】召喚1張『<color=Keyword>新銳搭檔</color>』到自己的戰場上。使其與這張卡片進化。",
+                    "card_set_id": 10005,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 2,
+                    "cv": "岡本信彥/夏吉ゆうこ",
+                    "illustrator": "オオイマ ヒロム",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "6ad90bc423454cd590d4e94e21178ce3",
+                    "card_banner_image_hash": "7f38bbd7e77c486c9e97f09b56e34528"
+                },
+                "evo": {
+                    "card_resource_id": 105121101,
+                    "flavour_text": "沒有任何東西能束縛你，強迫你要到哪裡去。\n想從命運之神改投遊戲之神的懷抱也無妨，\n翻轉立場屬人生常態！\n──蟲風花的遊戲 11‧《倒吊人》的引導",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_5】召喚1張『<color=Keyword>新銳搭檔</color>』到自己的戰場上。使其與這張卡片進化。",
+                    "card_image_hash": "e747ba2ca73f49cc946af13828620907",
+                    "card_banner_image_hash": "dd861dce56814abe9a790022fe2ed399"
+                },
+                "style_card_list": []
+            },
+            "10514110": {
+                "common": {
+                    "card_id": 10514110,
+                    "name": "佇天《倒吊人》‧羅弗拉德",
+                    "name_ruby": "佇天《倒吊人》‧羅弗拉德",
+                    "base_card_id": 10514110,
+                    "card_resource_id": 105141100,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "《自我犧牲》！沒人收下鬼牌遊戲就不會結束！\n就算我這麼說……你也已經不會相信了吧？\n但或許能找出不分上下，讓誰都不哭泣的方法呢！\n顛倒，欺騙，完全相反！",
+                    "skill_text": "【<color=Keyword>入場曲</color>】使這張卡片+X/+X。X為「自己的【<color=Keyword>連擊</color>】數」。\n<hr><ev>【<color=Keyword>進化時</color>】捨棄自己全部的手牌。隨機將敵方牌堆中的5張卡片各複製1張並以非公開形式增加到自己的手牌中。</ev>",
+                    "card_set_id": 10005,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 4,
+                    "cv": "保志總一朗",
+                    "illustrator": "ShuLa",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "05d471fe1eb14bf5ae5f8fe4d72f15e1",
+                    "card_banner_image_hash": "8f64c1d9951941448c0fdf7b38dccd07"
+                },
+                "evo": {
+                    "card_resource_id": 105141101,
+                    "flavour_text": "顛倒，欺騙，完全相反！\n使敵人墜地而喜如登天！贏了就跑才是最棒的！\n……就我所知，即使我這麼說，你也會懷疑吧！\n正因落敗才能得到的《自我滿足》更為重要！",
+                    "skill_text": "【<color=Keyword>入場曲</color>】使這張卡片+X/+X。X為「自己的【<color=Keyword>連擊</color>】數」。\n<hr><ev>【<color=Keyword>進化時</color>】捨棄自己全部的手牌。隨機將敵方牌堆中的5張卡片各複製1張並以非公開形式增加到自己的手牌中。</ev>",
+                    "card_image_hash": "b240100867324a77bf67c407bbfe77b6",
+                    "card_banner_image_hash": "4b45e7725cda4f4eb3da83dfabc0afb2"
+                },
+                "style_card_list": []
+            },
+            "10612110": {
+                "common": {
+                    "card_id": 10612110,
+                    "name": "慈顏的推行者",
+                    "name_ruby": "慈顏的推行者",
+                    "base_card_id": 10612110,
+                    "card_resource_id": 106121100,
+                    "atk": 1,
+                    "life": 2,
+                    "flavour_text": "無論是從雨雲中滴落的，或是從利刃上滴落的，\n對草木而言皆為養分，只須將之飲盡。\n緊咬信念，踐踏同伴，戰鬥仍在持續。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】增加1張『<color=Keyword>新綠的妖精</color>』到自己的手牌中。",
+                    "card_set_id": 10006,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 2,
+                    "cv": "守屋亨香",
+                    "illustrator": "藤江せい",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "ab0e18ee69db4dc08fa1cf3d6dee143d",
+                    "card_banner_image_hash": "0898647f61174c6a95dab7742f984d31"
+                },
+                "evo": {
+                    "card_resource_id": 106121101,
+                    "flavour_text": "年輪上燃起了火焰，一層又一層，都化為灰燼。\n過去是向其討教的師長，如今是必須死絕的存在。\n過去是生身之母，如今是害群之獸。\n無所區別也無須間斷，讓古老之物全部消失吧。",
+                    "skill_text": "【<color=Keyword>入場曲</color>】增加1張『<color=Keyword>新綠的妖精</color>』到自己的手牌中。",
+                    "card_image_hash": "2f61b421065f4a50a02851eda6f8a78a",
+                    "card_banner_image_hash": "e478f6036bce453fb07e615ea6b9a7d7"
+                },
+                "style_card_list": []
+            },
+            "90011120": {
+                "common": {
+                    "card_id": 90011120,
+                    "name": "新綠的妖精",
+                    "name_ruby": "新綠的妖精",
+                    "base_card_id": 90011120,
+                    "card_resource_id": 900111200,
+                    "atk": 1,
+                    "life": 1,
+                    "flavour_text": "無數年輕妖精一同歡迎天恩。\n由於天生的好奇心，\n唯有少數妖精能夠達到遠古境界。",
+                    "skill_text": "【<color=Keyword>守護</color>】\n自己的回合結束時，使這張卡片進化。",
+                    "card_set_id": 90000,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        5
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "熊谷海麗",
+                    "illustrator": "uid",
+                    "questions": [],
+                    "is_token": true,
+                    "is_include_rotation": false,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "2368f56cc7e54ba5b93c88bf5c1e5fcc",
+                    "card_banner_image_hash": "7ef2029ccf754cbbb55c502b276cde8d"
+                },
+                "evo": {
+                    "card_resource_id": 900111201,
+                    "flavour_text": "少數遠古妖精一同歡迎天災。\n由於天生容易厭倦，活越久越會對生命感到乏味。",
+                    "skill_text": "【<color=Keyword>守護</color>】\n自己的回合結束時，使這張卡片進化。",
+                    "card_image_hash": "65ff466dc56a482ea7fce5a2b2a40856",
+                    "card_banner_image_hash": "88572ac95f8e48cd9bece99b96c226e6"
+                },
+                "style_card_list": []
+            },
+            "10712110": {
+                "common": {
+                    "card_id": 10712110,
+                    "name": "綠風刺劍手",
+                    "name_ruby": "綠風刺劍手",
+                    "base_card_id": 10712110,
+                    "card_resource_id": 107121100,
+                    "atk": 2,
+                    "life": 2,
+                    "flavour_text": "「我會用這把弓討伐的，請放心。」\n鹿王的身體與其身為神的威嚴轉眼間變得十分渺小。\n這就是坦斯特黛茲所擁有的縮小化異能。\n──殲滅客神的凍結弓槍 9",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】使這張卡片獲得【<color=Keyword>疾馳</color>】。",
+                    "card_set_id": 10007,
+                    "type": 1,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 2,
+                    "cv": "岡咲美保",
+                    "illustrator": "メガシナモン",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "d461ed12177549568b1752cdaff9b458",
+                    "card_banner_image_hash": "a40b8b2f57c44afaa4342dad3e0556ad"
+                },
+                "evo": {
+                    "card_resource_id": 107121101,
+                    "flavour_text": "坦斯特黛茲的箭矢瞬間轉變，猶如巨槍般威勢非凡。\n「有人說用異能把箭變成槍很沒效率，\n但從遠方射箭根本是無聊又庸俗的殺害方法。」\n──殲滅客神的凍結弓槍 10",
+                    "skill_text": "【<color=Keyword>入場曲</color>】【<color=Keyword>連擊</color>_3】使這張卡片獲得【<color=Keyword>疾馳</color>】。",
+                    "card_image_hash": "3844b0467fa94e7f817a7daf15dba030",
+                    "card_banner_image_hash": "60c3efb3adfa436e84b0a30e5ea1659b"
+                },
+                "style_card_list": []
+            },
+            "10213310": {
+                "common": {
+                    "card_id": 10213310,
+                    "name": "花園的導引",
+                    "name_ruby": "花園的導引",
+                    "base_card_id": 10213310,
+                    "card_resource_id": 102133100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "請別為無法回家而嘆息。\n不必擔心，這座森林將會成為你的歸所。",
+                    "skill_text": "【<color=Keyword>融合</color>】精靈‧卡片\n<hr>由自己的牌堆中抽取1張卡片。如果已有卡片與這張卡片進行【<color=Keyword>融合</color>】，則會由原本的1張轉變為2張。",
+                    "card_set_id": 10002,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 3,
+                    "cv": "",
+                    "illustrator": "PEPPY",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "28f4c300208244b5a139debca1e7149b",
+                    "card_banner_image_hash": "6b332cac10ed475fa4eeba2dae9e273d"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10311310": {
+                "common": {
+                    "card_id": 10311310,
+                    "name": "野性的猛襲",
+                    "name_ruby": "野性的猛襲",
+                    "base_card_id": 10311310,
+                    "card_resource_id": 103113100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "遭熊記恨即是死期，\n獵物還來不及哀號便會被牠撕裂。",
+                    "skill_text": "指定1張敵方戰場上的從者卡。給予其4點傷害。【<color=Keyword>連擊</color>_3】由自己的牌堆中抽取1張卡片。",
+                    "card_set_id": 10003,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "3c4312ad16ff4059ae5bd900f331c4fd",
+                    "card_banner_image_hash": "d6e9e2676eba48448f67f87ef5a1aefe"
+                },
+                "evo": [],
+                "style_card_list": []
+            },
+            "10411310": {
+                "common": {
+                    "card_id": 10411310,
+                    "name": "帚星",
+                    "name_ruby": "帚星",
+                    "base_card_id": 10411310,
+                    "card_resource_id": 104113100,
+                    "atk": 0,
+                    "life": 0,
+                    "flavour_text": "雖然比以前更能掌握魔導弓的使用方式了，\n但我還遠遠不夠成熟。\n西澤瑪的居民們現在都已經走上嶄新的道路……\n我身為守護者，必須更加成長才行！",
+                    "skill_text": "指定1張敵方戰場上的從者卡。給予其4點傷害。如果自己戰場上有已進化的從者卡，則會由自己的牌堆中抽取1張卡片。",
+                    "card_set_id": 10004,
+                    "type": 4,
+                    "class": 1,
+                    "tribes": [
+                        0
+                    ],
+                    "cost": 2,
+                    "rarity": 1,
+                    "cv": "伊藤靜",
+                    "illustrator": "",
+                    "questions": [],
+                    "is_token": false,
+                    "is_include_rotation": true,
+                    "deck_enabled_num": 3,
+                    "card_image_hash": "4733805184ba4b12b8ede50763832258",
+                    "card_banner_image_hash": "3ea3d84369084d4daee6eaa8e43c690b"
+                },
+                "evo": [],
+                "style_card_list": []
+            }
+        },
+        "specific_effect_card_info": {
+            "10614122": {
+                "specific_effect_type": 4,
+                "cost": 0,
+                "skill_text": "信仰值由0開始。\n<hr>當自己的從者卡進化時，使信仰值+1。"
+            },
+            "10412312": {
+                "specific_effect_type": 1,
+                "cost": 0,
+                "skill_text": "【<color=Keyword>倒數</color>_1】\n【<color=Keyword>謝幕曲</color>】給予敵方的主戰者1點傷害。增加1張『<color=Keyword>綺羅星</color>』到自己的手牌中。"
+            },
+            "10712312": {
+                "specific_effect_type": 1,
+                "cost": 0,
+                "skill_text": "【<color=Keyword>倒數</color>_1】\n【<color=Keyword>謝幕曲</color>】增加1張『<color=Keyword>擴大惡意</color>』到自己的手牌中。"
+            },
+            "10713312": {
+                "specific_effect_type": 1,
+                "cost": 0,
+                "skill_text": "【<color=Keyword>倒數</color>_1】\n【<color=Keyword>謝幕曲</color>】增加1張『<color=Keyword>縮小憂慮</color>』到自己的手牌中。"
+            }
+        },
+        "tribe_names": {
+            "0": "-",
+            "2": "士兵",
+            "3": "魯米那斯",
+            "4": "雷維翁",
+            "5": "妖精",
+            "6": "死者",
+            "8": "土之印",
+            "11": "馬納歷亞",
+            "12": "巨像",
+            "13": "式神",
+            "14": "創造物",
+            "15": "人偶",
+            "17": "海洋",
+            "18": "財寶",
+            "19": "獵境者",
+            "20": "弒滅者"
+        },
+        "card_set_names": {
+            "10000": "基本卡",
+            "10001": "傳說揭幕",
+            "10002": "無限進化",
+            "10003": "絕傑的繼承者",
+            "10004": "蒼空六龍",
+            "10005": "花醉遊戲",
+            "10006": "天啟盟約",
+            "10007": "誅神弒滅者"
+        },
+        "skill_names": {
+            "0": "",
+            "1": "入場曲",
+            "2": "謝幕曲",
+            "3": "進化時",
+            "4": "攻擊時",
+            "5": "守護",
+            "6": "疾馳",
+            "7": "潛行",
+            "8": "必殺",
+            "9": "吸血",
+            "10": "覺醒",
+            "12": "魔力增幅時",
+            "13": "倒數",
+            "14": "死靈術",
+            "15": "土之秘術",
+            "16": "突進",
+            "17": "交戰時",
+            "18": "爆能強化",
+            "19": "亡者召還",
+            "22": "激奏",
+            "23": "瞬念召喚",
+            "24": "結晶",
+            "25": "融合",
+            "26": "協作",
+            "27": "土之印",
+            "29": "連擊",
+            "30": "威懾",
+            "31": "光紋",
+            "32": "障壁",
+            "33": "超進化時",
+            "34": "模式",
+            "35": "策動",
+            "36": "紋章",
+            "38": "啟示錄牌組",
+            "39": "信仰",
+            "40": "馬塞班恩牌組",
+            "41": "奧義",
+            "42": "解放奧義"
+        },
+        "skill_replace_text_names": {
+            "12": "魔力增幅"
+        },
+        "count": 86,
+        "sort_card_id_list": [
+            10012110,
+            10112120,
+            10614120,
+            10711120,
+            10012310,
+            10111310,
+            10212310,
+            10313310,
+            10412310,
+            10711310,
+            10712310,
+            10713310,
+            10011110,
+            10011120,
+            10111110,
+            10112130,
+            10113110,
+            10212120,
+            10311110,
+            10311120,
+            10412110,
+            10414110,
+            10511110,
+            10512110,
+            10514110,
+            10612110,
+            10712110,
+            10213310,
+            10311310,
+            10411310
+        ],
+        "stats_list": {
+            "atk": {
+                "min": 0,
+                "max": 13
+            },
+            "life": {
+                "min": 0,
+                "max": 13
+            },
+            "cost": {
+                "min": 0,
+                "max": 18
+            }
+        },
+        "result_error_code": null
+    }
+}
