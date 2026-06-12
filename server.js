@@ -21,9 +21,11 @@ async function startServer() {
 
   app.get('/api/cards', async (req, res) => {
     try {
-      const classId = req.query.class_id ? parseInt(req.query.class_id) : 0;
+      const query = req.query.class_id !== undefined
+        ? { class_id: parseInt(req.query.class_id) }
+        : {};
       const cards = await cardsCollection
-        .find({ class_id: classId })
+        .find(query)
         .sort({ cost: 1 })
         .toArray();
       res.json({ success: true, count: cards.length, data: cards });

@@ -1,26 +1,28 @@
 <template>
     <div class="search-area q-mb-lg q-mx-auto">
 
-        <!-- 職業篩選（複選） -->
+        <!-- 職業篩選（複選，空 = 全部） -->
         <div class="row justify-center items-center q-gutter-sm q-mb-md">
-            <q-btn v-for="(name, id) in CLASS_MAP" :key="id" :label="name" :color="store.selectedClasses.includes(Number(id)) ?
-                CLASS_COLORS[Number(id)]!.active :
-                CLASS_COLORS[Number(id)]!.inactive" no-caps unelevated @click="store.toggleClass(Number(id))" />
+            <q-btn v-for="(name, id) in CLASS_MAP" :key="id" :label="name"
+                :color="store.filters.classes.includes(Number(id))
+                    ? CLASS_COLORS[Number(id)]!.active
+                    : CLASS_COLORS[Number(id)]!.inactive"
+                no-caps unelevated @click="toggleArr(store.filters.classes, Number(id))" />
             <q-btn flat rounded no-caps dense color="grey-6" icon="close" label="清除"
-                :disable="store.selectedClasses.length === 0" @click="store.clearClasses()" />
+                @click="store.filters.classes = []" />
         </div>
 
         <!-- 名稱搜尋 + 搜尋按鈕 + 進階篩選切換 -->
         <div class="row justify-center items-center q-gutter-sm">
             <q-input v-model="store.filters.name" dense outlined dark clearable placeholder="搜尋卡片名稱..."
-                class="search-input" @keyup.enter="store.fetchSelectedClasses()">
+                class="search-input" @keyup.enter="store.fetchCards()">
                 <template #prepend>
                     <q-icon name="search" />
                 </template>
             </q-input>
 
             <q-btn unelevated no-caps color="primary" icon="search" label="搜尋" :loading="store.loading"
-                @click="store.fetchSelectedClasses()" />
+                @click="store.fetchCards()" />
 
             <q-btn flat rounded no-caps color="grey-4" :icon-right="showAdvanced ? 'expand_less' : 'expand_more'"
                 @click="showAdvanced = !showAdvanced">

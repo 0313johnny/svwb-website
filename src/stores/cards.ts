@@ -14,13 +14,14 @@ export const CLASS_MAP: Record<number, string> = {
 };
 
 export interface CardFilters {
+  classes: number[];      // 空陣列 = 顯示全部職業
   name: string;
   cardSets: number[];
-  costs: number[];       // 0~9 精確，10 代表 >= 10
-  types: number[];       // 1=從者, 2&3=護符(倒數與非倒數), 4=法術
+  costs: number[];        // 0~9 精確，10 代表 >= 10
+  types: number[];        // 1=從者, 2&3=護符(倒數與非倒數), 4=法術
   rarities: number[];
   tribes: number[];
-  skills: string[];      // 關鍵字文字
+  skills: string[];       // 關鍵字文字
   skillMode: 'OR' | 'AND';
   atkMin: number | null;
   atkMax: number | null;
@@ -31,6 +32,7 @@ export interface CardFilters {
 }
 
 const defaultFilters = (): CardFilters => ({
+  classes: [],
   name: '',
   cardSets: [],
   costs: [],
@@ -63,7 +65,6 @@ const API_BASE = 'http://localhost:3000';
 /** 以 storeId 建立獨立實例，不同頁面各自維護狀態 */
 export function useCardsStore(storeId = 'cards') {
   return defineStore(storeId, () => {
-  const selectedClasses = ref<number[]>([0,1,2,3,4,5,6,7]);
   const cardList = ref<Card[]>([]);
   const loading = ref(false);
 
@@ -76,10 +77,16 @@ export function useCardsStore(storeId = 'cards') {
     let list = cardList.value;
     const f = appliedFilters.value;
 
-    // 名稱
-    if (f.name.trim()) {
-      const kw = f.name.trim();
-      list = list.filter((c) => c.common.name.includes(kw));
+    // 費用（10 代表 >= 10）
+    if (f.costs.length) {
+      list = list.filter((c) =>
+        f.costs.some((fc) => (fc === 10 ? c.cost >= 10 : c.cost === fc)),
+      );
+    }
+
+    // 職業
+    if (f.classes.length) {
+      list = list.filter((c) => f.classes.includes(c.class_id));
     }
 
     // 卡包
@@ -87,11 +94,9 @@ export function useCardsStore(storeId = 'cards') {
       list = list.filter((c) => f.cardSets.includes(c.common.card_set_id));
     }
 
-    // 費用（10 代表 >= 10）
-    if (f.costs.length) {
-      list = list.filter((c) =>
-        f.costs.some((fc) => (fc === 10 ? c.cost >= 10 : c.cost === fc)),
-      );
+    // 稀有度
+    if (f.rarities.length) {
+      list = list.filter((c) => f.rarities.includes(c.rarity));
     }
 
     // 卡片分類（type 2 & 3 皆為護符）
@@ -103,11 +108,12 @@ export function useCardsStore(storeId = 'cards') {
       );
     }
 
-    // 稀有度
-    if (f.rarities.length) {
-      list = list.filter((c) => f.rarities.includes(c.rarity));
+    // 名稱
+    if (f.name.trim()) {
+      const kw = f.name.trim();
+      list = list.filter((c) => c.common.name.includes(kw));
     }
-
+  
     // 族群（OR）
     if (f.tribes.length) {
       list = list.filter((c) => f.tribes.some((tr) => c.common.tribes.includes(tr)));
@@ -141,47 +147,31 @@ export function useCardsStore(storeId = 'cards') {
       );
     }
 
-    // TODO: 加入排序功能（Sort）
-    // 目前順序為 API 回傳的預設順序（cost 遞增），但多職業合併後排序會混亂。
-    // 預計支援：費用（預設）、攻擊力、生命值、稀有度、卡片名稱等排序方式，
-    // 並可切換升冪 / 降冪。排序條件應同樣儲存在 Store 中，並於搜尋時一併套用。
-    return list;
+    // TODO : 這個 Sort 需要再修正
+    return list.slice().sort((a, b) =>
+      a.cost - b.cost ||
+      a.class_id - b.class_id ||
+      a.common.card_set_id - b.common.card_set_id ||
+      a.rarity - b.rarity ||
+      a.common.type - b.common.type
+    );
   });
 
-  /** 並行 fetch 所有已選職業並合併結果（同時將 pending filters 套用） */
-  async function fetchSelectedClasses() {
+  /** 一次抓全部卡片，同時將 pending filters 套用 */
+  async function fetchCards() {
     appliedFilters.value = JSON.parse(JSON.stringify(filters.value)) as CardFilters;
     loading.value = true;
     try {
-      if (selectedClasses.value.length === 0) {
-        cardList.value = [];
-        return;
-      }
-      const responses = await Promise.all(
-        selectedClasses.value.map((id) =>
-          fetch(`${API_BASE}/api/cards?class_id=${id}`).then(
-            (r) => r.json() as Promise<{ success: boolean; data: Card[] }>,
-          ),
-        ),
+      const res = await fetch(`${API_BASE}/api/cards`).then(
+        (r) => r.json() as Promise<{ success: boolean; data: Card[] }>,
       );
-      cardList.value = responses.filter((r) => r.success).flatMap((r) => r.data);
+      cardList.value = res.success ? res.data : [];
     } catch (e) {
       console.error('Failed to fetch cards:', e);
+      cardList.value = [];
     } finally {
       loading.value = false;
     }
-  }
-
-  /** 僅切換選取狀態，不自動 fetch，等使用者按「搜尋」才送出 */
-  function toggleClass(classId: number) {
-    const idx = selectedClasses.value.indexOf(classId);
-    if (idx === -1) selectedClasses.value.push(classId);
-    else selectedClasses.value.splice(idx, 1);
-  }
-
-  /** 重置職業篩選 >> 變回全選狀態 */
-  function clearClasses() {
-    selectedClasses.value = [0, 1, 2, 3, 4, 5, 6, 7];
   }
 
   function resetFilters() {
@@ -192,15 +182,12 @@ export function useCardsStore(storeId = 'cards') {
   }
 
   return {
-    selectedClasses,
     cardList,
     filteredCardList,
     loading,
     filters,
     appliedFilters,
-    toggleClass,
-    clearClasses,
-    fetchSelectedClasses,
+    fetchCards,
     resetFilters,
   };
   })();

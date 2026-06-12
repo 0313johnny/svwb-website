@@ -22,7 +22,7 @@ import SearchArea from 'src/components/SearchArea.vue';
 const store = useCardsStore('cardsList');
 
 onMounted(() => {
-  void store.fetchSelectedClasses();
+  void store.fetchCards();
 });
 </script>
 

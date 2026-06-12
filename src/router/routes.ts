@@ -8,6 +8,7 @@ const routes: RouteRecordRaw[] = [
       { path: '', component: () => import('pages/CardsList.vue') },
       { path: 'deck-builder', component: () => import('pages/DeckBuilder.vue') },
       { path: 'url-test', component: () => import('pages/DeckURLTest.vue') },
+      { path: 'deck-compare', component: () => import('pages/DeckCompare.vue') },
     ],
   },
 

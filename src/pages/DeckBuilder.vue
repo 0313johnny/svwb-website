@@ -22,7 +22,7 @@ import CardItem from 'src/components/CardItem.vue';
 const store = useCardsStore('deckBuilder');
 
 onMounted(() => {
-  void store.fetchSelectedClasses();
+  void store.fetchCards();
 });
 </script>
 

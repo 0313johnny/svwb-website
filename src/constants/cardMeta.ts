@@ -1,3 +1,6 @@
+// 輪換模式可用卡包：基本卡（常駐）+ 最新五包（每兩個月新增一包時更新此處）
+export const ROTATION_SET_IDS: number[] = [10000, 10003, 10004, 10005, 10006, 10007];
+
 export const CARD_SET_NAMES: Record<number, string> = {
   10000: '基本卡',
   10001: '傳說揭幕',
