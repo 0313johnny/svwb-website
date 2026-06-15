@@ -15,6 +15,10 @@ export interface CardCommon {
   skill_text?: string;
   /** 聲優名稱 */
   cv?: string;
+  /** 繪師名稱 */
+  illustrator?: string;
+  /** 風味文字（卡牌故事介紹） */
+  flavour_text?: string;
   /** 卡片圖片 hash，完整圖片 URL 為 https://shadowverse-wb.com/uploads/card_image/cht/card/{hash}.png */
   card_image_hash?: string;
   /** 橫幅縮圖 hash，完整圖片 URL 為 https://shadowverse-wb.com/uploads/card_image/cht/list/{hash}.png */
@@ -45,6 +49,8 @@ export interface CardEvo {
   life?: number;
   /** 進化後技能文字 */
   skill_text?: string;
+  /** 進化後風味文字 */
+  flavour_text?: string;
   /** 進化後卡片圖片 hash */
   card_image_hash?: string;
 }
