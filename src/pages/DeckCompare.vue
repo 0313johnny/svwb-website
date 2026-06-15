@@ -99,7 +99,7 @@ import { CanvasRenderer } from 'echarts/renderers';
 import { getDeckFromURL } from 'src/utils/url';
 import { useCardsStore, CLASS_MAP } from 'stores/cards';
 import { CLASS_COLORS, CLASS_DECK_COLORS } from 'src/constants/classColorSetting';
-import { ARCHETYPE_VERSIONS, LATEST_VERSION, classifyDeck } from 'src/constants/deckArchetypes';
+import { ARCHETYPE_VERSIONS, LATEST_VERSION, classifyDeck } from 'src/constants/archetype';
 import CardRow from 'src/components/CardRow.vue';
 
 const GRID_TOP    = 40;  // ECharts grid.top（legend 高度），卡片列表疊層對齊用
