@@ -3,13 +3,14 @@ import { MongoClient } from 'mongodb';
 import cors from 'cors';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT ?? 3000;
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN ?? 'http://localhost:9000';
 
-app.use(cors());
+app.use(cors({ origin: FRONTEND_ORIGIN }));
 app.use(express.json());
 
-const MONGO_URI =
-  'mongodb+srv://0313johnny_db_user:***REDACTED***@shadowversewb-data.rurwnd2.mongodb.net/?appName=ShadowverseWB-Data';
+const MONGO_URI = process.env.MONGO_URI;
+if (!MONGO_URI) throw new Error('MONGO_URI environment variable is not set');
 const client = new MongoClient(MONGO_URI);
 const dbName = 'shadowverse_wb';
 
@@ -35,7 +36,7 @@ async function startServer() {
   });
 
   app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
   });
 }
 
