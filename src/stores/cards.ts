@@ -8,7 +8,7 @@ export const CLASS_MAP: Record<number, string> = {
   2: '皇家護衛',
   3: '巫師',
   4: '龍族',
-  5: '夢魘',
+  5: '夜魔',
   6: '主教',
   7: '復仇者',
 };

@@ -9,6 +9,9 @@
           class="csv-input" @update:model-value="onFileSelected">
           <template #prepend><q-icon name="upload_file" /></template>
         </q-file>
+        <q-select v-model="selectedVersionId" outlined dark dense
+          :options="ARCHETYPE_VERSIONS.map(v => ({ label: v.label, value: v.id }))"
+          emit-value map-options label="牌組版本" style="min-width:180px" />
         <q-btn v-if="Object.keys(decksByClass).length" flat no-caps dense color="grey-5"
           icon="clear" label="清除" @click="reset" />
       </div>
@@ -29,10 +32,28 @@
 
         <!-- 展開的職業圖表 -->
         <template v-if="activeClass !== null">
+          <!-- Archetype 子分類按鈕 -->
+          <div class="row items-center q-gutter-xs q-mb-sm">
+            <q-btn no-caps unelevated dense size="sm"
+              :color="activeArchetype === null ? 'grey-5' : 'grey-9'"
+              :label="`全部 (${decksByClass[activeClass]?.length ?? 0})`"
+              @click="activeArchetype = null" />
+            <q-btn v-for="arch in availableArchetypes" :key="arch.id"
+              no-caps unelevated dense size="sm"
+              :color="activeArchetype === arch.id ? 'primary' : 'grey-8'"
+              :label="`${arch.name} (${archetypeCounts.get(arch.id) ?? 0})`"
+              @click="activeArchetype = arch.id" />
+            <q-btn v-if="(archetypeCounts.get(null) ?? 0) > 0"
+              no-caps unelevated dense size="sm"
+              :color="activeArchetype === '__unclassified__' ? 'grey-5' : 'grey-9'"
+              :label="`未分類 (${archetypeCounts.get(null) ?? 0})`"
+              @click="activeArchetype = '__unclassified__'" />
+          </div>
+
           <div class="row items-center q-gutter-sm q-mb-sm">
             <span class="text-subtitle2 text-grey-4">
               {{ CLASS_MAP[activeClass] }} —
-              共 {{ decksByClass[activeClass]?.length ?? 0 }} 副牌組，
+              共 {{ filteredMaps.length }} 副牌組，
               {{ chartData.length }} 種卡片
             </span>
             <q-space />
@@ -78,6 +99,7 @@ import { CanvasRenderer } from 'echarts/renderers';
 import { getDeckFromURL } from 'src/utils/url';
 import { useCardsStore, CLASS_MAP } from 'stores/cards';
 import { CLASS_COLORS, CLASS_DECK_COLORS } from 'src/constants/classColorSetting';
+import { ARCHETYPE_VERSIONS, LATEST_VERSION, classifyDeck } from 'src/constants/deckArchetypes';
 import CardRow from 'src/components/CardRow.vue';
 
 const GRID_TOP    = 40;  // ECharts grid.top（legend 高度），卡片列表疊層對齊用
@@ -104,6 +126,60 @@ const decksByClass = ref<Record<number, Map<number, number>[]>>({});
 // 目前展開的職業，null = 全收合
 const activeClass = ref<number | null>(null);
 
+// 選取的 archetype 版本
+const selectedVersionId = ref(LATEST_VERSION.id);
+const selectedArchetypes = computed(
+  () => ARCHETYPE_VERSIONS.find((v) => v.id === selectedVersionId.value)?.archetypes
+    ?? LATEST_VERSION.archetypes,
+);
+
+// 目前選取的 archetype 子分類
+// null = 全部，'__unclassified__' = 未分類，其他 = archetype.id
+const activeArchetype = ref<string | null>(null);
+
+// 切換職業時重置子分類
+watch(activeClass, () => { activeArchetype.value = null; });
+
+// ── Archetype 分類 ────────────────────────────────────────────
+
+// 對目前職業的每副牌組做分類
+const classifiedDecks = computed(() => {
+  if (activeClass.value === null) return [];
+  const maps = decksByClass.value[activeClass.value] ?? [];
+  return maps.map((map) => ({
+    map,
+    archetype: classifyDeck([...map.keys()], selectedArchetypes.value),
+  }));
+});
+
+// 各 archetype id（含 null = 未分類）的牌組數
+const archetypeCounts = computed(() => {
+  const counts = new Map<string | null, number>();
+  for (const { archetype } of classifiedDecks.value) {
+    const key = archetype?.id ?? null;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+});
+
+// 目前職業下有牌組的 archetype 清單（依版本定義順序）
+const availableArchetypes = computed(() =>
+  selectedArchetypes.value.filter(
+    (a) => a.classId === activeClass.value && (archetypeCounts.value.get(a.id) ?? 0) > 0,
+  )
+);
+
+// 依 activeArchetype（id）過濾後的牌組 map 陣列
+const filteredMaps = computed(() => {
+  if (activeArchetype.value === null)
+    return classifiedDecks.value.map((d) => d.map);
+  if (activeArchetype.value === '__unclassified__')
+    return classifiedDecks.value.filter((d) => d.archetype === null).map((d) => d.map);
+  return classifiedDecks.value
+    .filter((d) => d.archetype?.id === activeArchetype.value)
+    .map((d) => d.map);
+});
+
 // 排序設定
 const sortBy    = ref<'cost' | 'usage'>('cost');
 const sortOrder = ref<'asc' | 'desc'>('asc');
@@ -122,34 +198,40 @@ function onFileSelected(file: File | null) {
 
   Papa.parse<Record<string, string>>(file, {
     header: true,
-    skipEmptyLines: true,
+    skipEmptyLines: false,
     complete(results) {
       try {
         const grouped: Record<number, Map<number, number>[]> = {};
+        const headers = results.meta.fields ?? [];
+        const isTeamFormat = headers.includes('牌組連結');
 
-        for (const row of results.data) {
-          const entries = [
-            { url: row['牌組(一) 連結'] },
-            { url: row['牌組(二) 連結'] },
-          ];
+        // 從單筆 URL 建立 Map 並塞入 grouped
+        function pushUrl(url: string) {
+          if (!url?.trim()) return;
+          try {
+            const deck = getDeckFromURL(url.trim());
+            const classId = parseInt(deck.deckClass);
+            if (isNaN(classId) || classId === 0) return;
+            const map = new Map<number, number>();
+            for (const id of deck.cards) map.set(id, (map.get(id) ?? 0) + 1);
+            if (!grouped[classId]) grouped[classId] = [];
+            grouped[classId]?.push(map);
+          } catch { /* 單筆解析失敗跳過 */ }
+        }
 
-          for (const { url } of entries) {
-            if (!url?.trim()) continue;
-            try {
-              const deck = getDeckFromURL(url.trim());
-              const classId = parseInt(deck.deckClass);
-              if (isNaN(classId) || classId === 0) continue;
-
-              const map = new Map<number, number>();
-              for (const id of deck.cards) {
-                map.set(id, (map.get(id) ?? 0) + 1);
-              }
-
-              if (!grouped[classId]) grouped[classId] = [];
-              grouped[classId]?.push(map);
-            } catch {
-              // 單筆 URL 解析失敗時跳過
-            }
+        if (isTeamFormat) {
+          // 團體戰格式：隊伍名稱空白時沿用前一行
+          let lastTeam = '';
+          for (const row of results.data) {
+            if (row['隊伍名稱']?.trim()) lastTeam = row['隊伍名稱'].trim();
+            if (!lastTeam) continue;
+            pushUrl(row['牌組連結'] ?? '');
+          }
+        } else {
+          // 個人賽格式：一行兩套牌
+          for (const row of results.data) {
+            pushUrl(row['牌組(一) 連結'] ?? '');
+            pushUrl(row['牌組(二) 連結'] ?? '');
           }
         }
 
@@ -164,10 +246,10 @@ function onFileSelected(file: File | null) {
   });
 }
 
-// ── 統計資料（依 activeClass） ────────────────────────────────
+// ── 統計資料（依 activeClass + activeArchetype）───────────────
 const chartData = computed(() => {
   if (activeClass.value === null) return [];
-  const maps = decksByClass.value[activeClass.value] ?? [];
+  const maps = filteredMaps.value;
   if (!maps.length || !cardStore.cardList.length) return [];
 
   // 收集該職業牌組中出現過的所有 cardId
@@ -225,7 +307,7 @@ const chartOption = computed(() => {
   if (!chartData.value.length) return {};
 
   const cards      = chartData.value;
-  const deckCount  = (decksByClass.value[activeClass.value!] ?? []).length;
+  const deckCount  = filteredMaps.value.length;
   const cardNames  = cards.map((c) => `[${c.cost}] ${c.name}`);
   const stackColors = CLASS_DECK_COLORS[activeClass.value!] ?? DEFAULT_STACK_COLORS;
 
@@ -301,10 +383,11 @@ watch(chartData, () => { overlayTops.value = []; });
 
 // ── 重置 ──────────────────────────────────────────────────────
 function reset() {
-  csvFile.value      = null;
-  decksByClass.value = {};
-  activeClass.value  = null;
-  error.value        = '';
+  csvFile.value        = null;
+  decksByClass.value   = {};
+  activeClass.value    = null;
+  activeArchetype.value = null;
+  error.value          = '';
 }
 </script>
 

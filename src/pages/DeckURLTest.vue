@@ -33,8 +33,7 @@
                 <!-- 卡片列表（三欄，每欄最多 14 種） -->
                 <div class="row q-col-gutter-sm">
                     <div v-for="(col, ci) in cardColumns" :key="ci" class="col-4 column q-gutter-xs">
-                        <CardRow v-for="entry in col" :key="entry.cardId"
-                            :cost="entry.cost" :name="entry.name"
+                        <CardRow v-for="entry in col" :key="entry.cardId" :cost="entry.cost" :name="entry.name"
                             :rarity="entry.rarity" :banner-url="entry.bannerUrl">
                             <span class="count-badge q-ml-xs">×{{ entry.count }}</span>
                         </CardRow>
@@ -134,7 +133,7 @@ const DECK_CLASS_NAMES: Record<string, string> = {
     [DECK_CLASS.SWORDCRAFT]: '皇家護衛',
     [DECK_CLASS.RUNECRAFT]: '巫師',
     [DECK_CLASS.DRAGONCRAFT]: '龍族',
-    [DECK_CLASS.ABYSSCRAFT]: '夢魘',
+    [DECK_CLASS.ABYSSCRAFT]: '夜魔',
     [DECK_CLASS.HEAVENCRAFT]: '主教',
     [DECK_CLASS.PORTALCRAFT]: '復仇者',
 };
