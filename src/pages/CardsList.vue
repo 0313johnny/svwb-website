@@ -8,18 +8,25 @@
     </div>
 
     <div v-else class="card-grid row justify-center q-gutter-md q-mx-auto">
-      <CardItem v-for="card in store.filteredCardList" :key="card._id" :card="card" />
+      <CardItem v-for="card in store.filteredCardList" :key="card._id" :card="card"
+        @select="selectedCard = card; showDetail = true" />
     </div>
+
+    <CardDetail v-if="selectedCard" v-model="showDetail" :card="selectedCard" />
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useCardsStore } from 'stores/cards';
+import type { Card } from 'src/components/models';
 import CardItem from 'src/components/CardItem.vue';
+import CardDetail from 'src/components/CardDetail.vue';
 import SearchArea from 'src/components/SearchArea.vue';
 
 const store = useCardsStore('cardsList');
+const selectedCard = ref<Card | null>(null);
+const showDetail = ref(false);
 
 onMounted(() => {
   void store.fetchCards();

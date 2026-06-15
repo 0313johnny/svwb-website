@@ -1,5 +1,5 @@
 <template>
-  <q-card class="card-item" dark bordered>
+  <q-card class="card-item cursor-pointer" dark bordered @click="$emit('select', card)">
     <!-- 卡片圖片：暫時停用，避免大量請求官方伺服器，待規劃本地下載後啟用 -->
     <div class="card-image-wrapper">
       <img v-if="card.common.card_image_hash"
@@ -31,6 +31,7 @@
 import type { Card } from 'src/components/models';
 
 defineProps<{ card: Card }>();
+defineEmits<{ select: [card: Card] }>();
 </script>
 
 <style scoped lang="scss">
