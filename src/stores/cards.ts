@@ -60,7 +60,7 @@ function extractKeywords(skillText: string): string[] {
   return keywords;
 }
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'https://svwb-website-production.up.railway.app';
 
 /** 以 storeId 建立獨立實例，不同頁面各自維護狀態 */
 export function useCardsStore(storeId = 'cards') {
