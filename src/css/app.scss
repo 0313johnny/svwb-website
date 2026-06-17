@@ -1,5 +1,19 @@
 // app global css
 
+// ── 淺色背景強制深色文字 ────────────────────────────────────────
+// Electric Aqua (#64e9ee) 與 Sky Blue (#97c8eb) 為淺色，文字需為深色
+.bg-primary,
+.q-btn.bg-primary .q-btn__content,
+.q-chip.bg-primary {
+  color: var(--c-ink) !important;
+}
+
+.bg-accent,
+.q-btn.bg-accent .q-btn__content,
+.q-chip.bg-accent {
+  color: var(--c-ink) !important;
+}
+
 // ── 全局 Chip hover 發光效果 ────────────────────────────────────
 .q-chip.q-chip--clickable {
   border: 1px solid rgba(100, 233, 238, 0.1);
