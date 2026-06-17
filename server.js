@@ -1,3 +1,5 @@
+import { config } from 'dotenv';
+config({ path: '.env.local' });
 import express from 'express';
 import { MongoClient } from 'mongodb';
 import cors from 'cors';

@@ -19,6 +19,7 @@
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
     "echarts": "^6.1.0",
     "express": "^5.1.0",
     "mongodb": "^6.17.0",
