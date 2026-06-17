@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="bg-grey-10" elevated>
+    <q-header class="bg-dark" elevated>
       <q-toolbar>
         <q-toolbar-title class="text-weight-bold">
           <span class="text-primary">Shadowverse: World Beyond 社群網站</span>

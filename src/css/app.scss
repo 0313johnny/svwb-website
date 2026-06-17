@@ -1,1 +1,15 @@
 // app global css
+
+// ── SVWB 品牌色票（CSS 變數，供所有元件直接使用） ──────────────
+:root {
+  --c-ink:      #001011;   // Ink Black  — 頁面底色
+  --c-dark:     #093a3e;   // Dark Teal  — 元件背景
+  --c-teal:     #3aafb9;   // Tropical Teal — 次要強調
+  --c-aqua:     #64e9ee;   // Electric Aqua — 主要強調 / 發光
+  --c-sky:      #97c8eb;   // Sky Blue   — 文字強調
+
+  // 發光效果預設值（供 hover 特效統一引用）
+  --glow-sm:    0 0 8px rgba(100, 233, 238, 0.35);
+  --glow-md:    0 0 16px rgba(100, 233, 238, 0.5);
+  --glow-border: 0 0 0 1px rgba(100, 233, 238, 0.5);
+}

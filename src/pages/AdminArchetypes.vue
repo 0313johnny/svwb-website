@@ -17,7 +17,7 @@
       <q-banner v-if="error" class="q-mb-md bg-red-9 text-white rounded-borders">{{ error }}</q-banner>
 
       <!-- 卡表載入中 -->
-      <q-banner v-if="cardStore.loading" class="q-mb-md bg-grey-9 text-grey-4 rounded-borders">
+      <q-banner v-if="cardStore.loading" class="q-mb-md bg-dark text-grey-4 rounded-borders">
         卡表載入中...
       </q-banner>
 
@@ -27,7 +27,7 @@
           <span class="text-subtitle2 text-grey-4">共 {{ cards.length }} 種卡片</span>
           <q-space />
           <q-btn-toggle v-model="copyMode" dense flat no-caps rounded toggle-color="primary"
-            color="grey-8" text-color="white"
+            color="dark" text-color="white"
             :options="[{ label: '全選為 core', value: 'core' }, { label: '全選為 flex', value: 'flex' }]" />
           <q-btn unelevated no-caps size="sm" color="teal-8" icon="content_copy"
             label="複製陣列" @click="copyArray" />
@@ -62,7 +62,7 @@
 
             <!-- core / flex 切換 -->
             <q-btn-toggle v-if="card.selected" v-model="card.role" dense flat no-caps
-              toggle-color="primary" color="grey-9" text-color="grey-5" size="xs"
+              toggle-color="primary" color="dark" text-color="grey-5" size="xs"
               :options="[{ label: 'core', value: 'core' }, { label: 'flex', value: 'flex' }]" />
             <span v-else class="text-caption text-grey-8" style="width:80px" />
           </div>

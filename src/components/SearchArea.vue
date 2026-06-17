@@ -96,7 +96,7 @@
                             <div class="column q-gutter-sm">
                                 <div class="column items-start">
                                     <q-btn-toggle v-model="store.filters.isToken" dense flat no-caps rounded
-                                        toggle-color="primary" color="grey-8" text-color="white" :options="[
+                                        toggle-color="primary" color="dark" text-color="white" :options="[
                                             { label: '不篩選', value: null },
                                             { label: '一般', value: false },
                                             { label: '只搜尋特殊卡', value: true },
@@ -105,7 +105,7 @@
                                 <div class="column items-start">
                                     <div class="text-caption text-grey-5 q-mb-xs">擁有特殊插畫風格</div>
                                     <q-btn-toggle v-model="store.filters.hasStyle" dense flat no-caps rounded
-                                        toggle-color="primary" color="grey-8" text-color="white" :options="[
+                                        toggle-color="primary" color="dark" text-color="white" :options="[
                                             { label: '不篩選', value: null },
                                             { label: '有', value: true },
                                             { label: '無', value: false },
@@ -166,7 +166,7 @@
                         <FilterSection label="能力關鍵字">
                             <template #label-append>
                                 <q-btn-toggle v-model="store.filters.skillMode" dense flat no-caps rounded
-                                    toggle-color="primary" color="grey-8" text-color="white"
+                                    toggle-color="primary" color="dark" text-color="white"
                                     :options="[{ label: 'OR', value: 'OR' }, { label: 'AND', value: 'AND' }]"
                                     class="skill-mode-toggle" />
                                 <ClearBtn class="q-ml-xs" @click="store.filters.skills = []" />

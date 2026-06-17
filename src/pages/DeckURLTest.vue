@@ -14,7 +14,7 @@
             </q-banner>
 
             <!-- 卡表載入中 -->
-            <q-banner v-if="cardStore.loading" class="q-mt-md bg-grey-9 text-grey-4 rounded-borders">
+            <q-banner v-if="cardStore.loading" class="q-mt-md bg-dark text-grey-4 rounded-borders">
                 卡表載入中...
             </q-banner>
 
@@ -24,10 +24,10 @@
 
                 <!-- 基本資訊 -->
                 <div class="row q-gutter-md q-mb-md">
-                    <q-chip dense color="grey-8" text-color="white" :label="`遊戲模式：${gamemodeName}`" />
-                    <q-chip dense color="grey-8" text-color="white" :label="`職業：${deckClassName}`" />
-                    <q-chip dense color="grey-8" text-color="white" :label="`語言：${result.lang}`" />
-                    <q-chip dense color="grey-8" text-color="white" :label="`共 ${result.cards.length} 張`" />
+                    <q-chip dense color="dark" text-color="white" :label="`遊戲模式：${gamemodeName}`" />
+                    <q-chip dense color="dark" text-color="white" :label="`職業：${deckClassName}`" />
+                    <q-chip dense color="dark" text-color="white" :label="`語言：${result.lang}`" />
+                    <q-chip dense color="dark" text-color="white" :label="`共 ${result.cards.length} 張`" />
                 </div>
 
                 <!-- 卡片列表（三欄，每欄最多 14 種） -->

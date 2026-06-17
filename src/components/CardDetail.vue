@@ -24,7 +24,7 @@
 
                     <!-- 進化切換（從者才有） -->
                     <q-btn-toggle v-if="card.evo?.card_image_hash" v-model="showEvo" dense unelevated no-caps
-                        toggle-color="amber-8" color="grey-9" text-color="grey-4"
+                        toggle-color="primary" color="dark" text-color="grey-4"
                         :options="[{ label: '通常', value: false }, { label: '進化', value: true }]" />
 
                     <!-- 特殊插畫 -->
@@ -46,8 +46,8 @@
                             {{ card.cost }}
                         </q-avatar>
                         <q-chip dense :color="rarityColor" text-color="white" :label="rarityName" />
-                        <q-chip dense color="grey-8" text-color="grey-3" :label="className" />
-                        <q-chip v-if="typeName" dense color="grey-9" text-color="grey-4" :label="typeName" />
+                        <q-chip dense color="dark" text-color="grey-3" :label="className" />
+                        <q-chip v-if="typeName" dense color="dark" text-color="grey-4" :label="typeName" />
                         <template v-for="t in card.common.tribes" :key="t">
                             <q-chip v-if="TRIBE_NAMES[t]" dense color="indigo-9" text-color="grey-3"
                                 :label="TRIBE_NAMES[t]" />
@@ -166,7 +166,7 @@ function parseSkillText(text: string): string {
     width: min(860px, 96vw);
     max-height: 96vh;
     margin: auto;
-    background-color: #1a1a2e;
+    background-color: var(--c-ink);
 }
 
 .detail-bar {
