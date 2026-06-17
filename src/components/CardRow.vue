@@ -1,7 +1,7 @@
 <template>
   <div class="card-row row items-center q-px-sm rounded-borders"
     :style="bannerUrl
-      ? { backgroundImage: `url(${bannerUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+      ? { backgroundImage: `url(${bannerUrl})`, backgroundSize: 'cover', backgroundPosition: 'right center', backgroundRepeat: 'no-repeat' }
       : {}">
     <q-avatar size="22px" color="green-8" text-color="white"
       class="text-weight-bold q-mr-sm flex-shrink-0" style="font-size:11px">
@@ -31,9 +31,16 @@ const rarityColor = computed(() => RARITY_COLORS[props.rarity] ?? 'grey-3');
 
 <style scoped lang="scss">
 .card-row {
-  height: 26px;
+  height: 32px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(100, 233, 238, 0.1);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: rgba(100, 233, 238, 0.5);
+    box-shadow: var(--glow-sm);
+  }
 }
 
 .card-name-shadow {

@@ -1,5 +1,5 @@
 <template>
-  <q-card class="card-item cursor-pointer" dark bordered @click="$emit('select', card)">
+  <q-card class="card-item cursor-pointer" dark @click="$emit('select', card)">
     <!-- 卡片圖片：暫時停用，避免大量請求官方伺服器，待規劃本地下載後啟用 -->
     <div class="card-image-wrapper">
       <img v-if="card.common.card_image_hash"
@@ -38,11 +38,20 @@ defineEmits<{ select: [card: Card] }>();
 .card-item {
   width: 180px;
   background-color: $dark;
+  border: 1px solid rgba(100, 233, 238, 0.15) !important;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: rgba(100, 233, 238, 0.6);
+    box-shadow: var(--glow-sm), var(--glow-border);
+    transform: scale(1.05);
+    // transform: translateY(-3px);
+  }
 }
 
 .card-image-wrapper {
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-image {

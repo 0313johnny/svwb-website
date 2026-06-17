@@ -1,5 +1,16 @@
 // app global css
 
+// ── 全局 Chip hover 發光效果 ────────────────────────────────────
+.q-chip.q-chip--clickable {
+  border: 1px solid rgba(100, 233, 238, 0.1);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: rgba(100, 233, 238, 0.5);
+    box-shadow: var(--glow-sm);
+  }
+}
+
 // ── SVWB 品牌色票（CSS 變數，供所有元件直接使用） ──────────────
 :root {
   --c-ink:      #001011;   // Ink Black  — 頁面底色

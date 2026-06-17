@@ -98,7 +98,7 @@ import CardRow from 'src/components/CardRow.vue';
 
 const GRID_TOP = 40;  // ECharts grid.top（legend 高度），卡片列表疊層對齊用
 const GRID_BOTTOM = 10;
-const ROW_H = 30;  // 每列高度：CardRow 26px + gap 4px
+const ROW_H = 36;  // 每列高度：CardRow 32px + gap 4px
 
 use([BarChart, GridComponent, TooltipComponent, LegendComponent, CanvasRenderer]);
 
