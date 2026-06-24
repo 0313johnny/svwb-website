@@ -1,5 +1,7 @@
 import { config } from 'dotenv';
 config({ path: '.env.local' });
+import dns from 'dns';
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 import express from 'express';
 import { MongoClient } from 'mongodb';
 import cors from 'cors';
