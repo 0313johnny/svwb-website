@@ -80,10 +80,11 @@
                     </div>
 
                     <!-- 紋章/信仰 (如有) -->
-                    <div v-if="card.specific_effect" class="q-mt-sm">
+                    <div v-if="card.specific_effect" class="specific-effect-card q-pa-sm rounded-borders">
                         <q-chip dense :color="card.specific_effect.type === 1 ? 'purple-8' : 'amber-8'"
-                            text-color="white" :label="card.specific_effect.type === 1 ? '紋章' : '信仰'" />
-                        <div class="text-body2 text-grey-3 skill-text q-mt-xs"
+                            text-color="white" :label="card.specific_effect.type === 1 ? '紋章' : '信仰'"
+                            class="q-mb-xs" />
+                        <div class="text-body2 text-grey-3 skill-text"
                             v-html="parseSkillText(card.specific_effect.skill_text)" />
                     </div>
 
@@ -235,5 +236,10 @@ function parseSkillText(text: string): string {
     white-space: pre-wrap;
     font-style: italic;
     opacity: 0.75;
+}
+
+.specific-effect-card {
+    background-color: var(--c-dark);
+    border: 1px solid rgba(100, 233, 238, 0.15);
 }
 </style>
