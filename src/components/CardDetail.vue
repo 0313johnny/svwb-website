@@ -79,6 +79,14 @@
                         <div class="text-body2 text-grey-3 skill-text" v-html="parseSkillText(currentSkillText)" />
                     </div>
 
+                    <!-- 紋章/信仰 (如有) -->
+                    <div v-if="card.specific_effect" class="q-mt-sm">
+                        <q-chip dense :color="card.specific_effect.type === 1 ? 'purple-8' : 'amber-8'"
+                            text-color="white" :label="card.specific_effect.type === 1 ? '紋章' : '信仰'" />
+                        <div class="text-body2 text-grey-3 skill-text q-mt-xs"
+                            v-html="parseSkillText(card.specific_effect.skill_text)" />
+                    </div>
+
                     <!-- 卡片介紹 -->
                     <div v-if="currentFlavourText" class="flavour-block">
                         <q-separator dark class="q-mb-sm" />

@@ -85,4 +85,14 @@ export interface Card {
   evo?: CardEvo;
   /** 特殊插畫風格列表（無特殊插畫時為空陣列） */
   style_card_list: StyleCard[];
+  /** 卡片擁有的特殊能力 */
+  specific_effect?: SpecificEffect;
+}
+
+/**
+ * 卡片擁有的特殊能力欄位
+ */
+export interface SpecificEffect {
+  type: 1 | 4;        // 1=紋章, 4=信仰
+  skill_text: string;
 }

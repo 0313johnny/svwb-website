@@ -10,6 +10,7 @@ export const CARD_SET_NAMES: Record<number, string> = {
   10005: '花醉遊戲',
   10006: '天啟盟約',
   10007: '誅神弒滅者',
+  10008: '命運典錄',
 };
 
 export const RARITY_NAMES: Record<number, string> = {
